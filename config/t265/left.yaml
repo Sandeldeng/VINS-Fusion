@@ -1,0 +1,33 @@
+%YAML:1.0
+---
+model_type: MEI
+camera_name: camera
+image_width: 848
+image_height: 800
+# mirror_parameters:
+#    xi:  1.08844432163
+# distortion_parameters:
+#    k1: -0.21158795013862966
+#    k2:  -0.1416157047256755
+#    p1: -0.0001758336819991864
+#    p2: -0.0010182832660460793
+# projection_parameters:
+#    gamma1: 596.6258940943679
+#    gamma2: 597.0995504287208
+#    u0: 421.3770061895149
+#    v0: 394.11300365461227
+
+# t265-4
+mirror_parameters:
+   xi:  1.04187872622
+distortion_parameters:
+   k1: -0.2266219007112039
+   k2:  -0.10497226146319966
+   p1: -1.2211321768965787e-06
+   p2: -0.0007530856665915343
+projection_parameters:
+   gamma1: 583.0320890820212
+   gamma2: 583.5316865276096
+   u0: 420.9669017263719
+   v0: 393.92555884668207
+

@@ -3,7 +3,7 @@
 #common parameters
 #support: 1 imu 1 cam; 1 imu 2 cam: 2 cam; 
 imu: 1         
-num_of_cam: 2  
+num_of_cam: 1  
 
 imu_topic: "/mynteye/imu/data_raw"
 image0_topic: "/mynteye/left/image_raw"
@@ -25,18 +25,18 @@ body_T_cam0: !!opencv-matrix
    rows: 4
    cols: 4
    dt: d
-   data: [ -0.00272858, -0.99995303, -0.0092998,  -0.00411278,
-           0.99999622, -0.0027315,   0.00030123, -0.04497515,
-           -0.00032662, -0.00929894,  0.99995671,  0.03489686,
+   data: [ 0.00059588, -0.99994732, -0.01024721, -0.00498513,
+           0.99999943,  0.00058672,  0.00089623, -0.04434677,
+           -0.00089017, -0.01024774,  0.99994709,  0.03405393,
            0., 0., 0., 1. ]
 #cam1 to imu0
 body_T_cam1: !!opencv-matrix
    rows: 4
    cols: 4
    dt: d
-   data: [ -0.00614389, -0.99988624, -0.01377534, -0.00498364,
-            0.99996726, -0.00621577,  0.00518139,  0.07498087,
-           -0.00526642, -0.01374306,  0.99989169,  0.03433984,
+   data: [ -0.00279957, -0.99988981, -0.01457808, -0.00546304,
+            0.99998003, -0.00288183,  0.00562496,  0.07559,
+           -0.00566635, -0.01456204,  0.99987791,  0.03354295,
             0., 0., 0., 1.]
 
 #Multiple thread support
@@ -64,9 +64,9 @@ g_norm: 9.7833         # gravity magnitude
 
 #unsynchronization parameters
 estimate_td: 1                      # online estimate time offset between camera and imu
-td: -0.000746581683518                           # initial value of time offset. unit: s. readed image clock + td = real image clock (IMU clock)
+td: -0.000563403357432                          # initial value of time offset. unit: s. readed image clock + td = real image clock (IMU clock)
 
 #loop closure parameters
 load_previous_pose_graph: 0        # load and reuse previous pose graph; load from 'pose_graph_save_path'
-pose_graph_save_path: "/home/tony-ws1/output/pose_graph/" # save and load path
+pose_graph_save_path: "/home/chao/output/pose_graph/" # save and load path
 save_image: 1                   # save image in pose graph for visualization prupose; you can close this function by setting 0 
